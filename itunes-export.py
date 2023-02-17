@@ -12,7 +12,7 @@ parser.add_argument("--export-genius-playlists", action='store_true', dest='expo
 parser.add_argument("--export-smart-playlists", action='store_true', dest='exportSmartPlaylists')
 args = parser.parse_args()
 
-libraryPath = args.library
+libraryPath = Path(args.library)
 playlistRootPath = Path(args.output)
 ignoreList= args.ignore if args.ignore is not None else []
 
